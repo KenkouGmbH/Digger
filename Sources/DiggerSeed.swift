@@ -86,7 +86,9 @@ public  class DiggerSeed {
         return self
     }
     
-    
+    func cancel() {
+        downloadTask.cancel()
+    }
 }
 
 
