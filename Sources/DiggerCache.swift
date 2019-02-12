@@ -119,6 +119,14 @@ public class DiggerCache {
 // MARK: - fileHelper
 extension DiggerCache {
     
+    /// existedFileURL
+    public static func existedFileURL(from url: URL) -> URL? {
+        if isFileExist(atPath: cachePath(url: url)) {
+            return URL(fileURLWithPath: cachePath(url: url))
+        }
+        return nil
+    }
+    
     /// isFileExist
     public static func isFileExist(atPath filePath : String ) -> Bool {
         
